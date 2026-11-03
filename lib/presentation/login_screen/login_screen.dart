@@ -59,18 +59,26 @@ class _LoginScreenState extends State<LoginScreen>
     await Future.delayed(const Duration(milliseconds: 1400));
     if (mounted) {
       setState(() => _isLoading = false);
+      final email = _emailController.text.toLowerCase();
+      final isCollector = email.contains('driver') || email.contains('collector');
+      
       Navigator.pushNamedAndRemoveUntil(
         context,
-        AppRoutes.dashboardHomeScreen,
+        isCollector ? AppRoutes.collectorDashboardScreen : AppRoutes.dashboardHomeScreen,
         (route) => false,
       );
     }
   }
 
-  void _fillDemoCredentials() {
+  void _fillDemoCredentials(String role) {
     setState(() {
-      _emailController.text = 'maya.chen@ecobin.app';
-      _passwordController.text = 'EcoGreen2024!';
+      if (role == 'Collector') {
+        _emailController.text = 'driver.john@ecobin.app';
+        _passwordController.text = 'Collector2024!';
+      } else {
+        _emailController.text = 'maya.chen@ecobin.app';
+        _passwordController.text = 'EcoGreen2024!';
+      }
     });
   }
 
