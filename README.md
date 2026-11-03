@@ -8,67 +8,78 @@
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Flutter-Pack/master/assets/images/logo/flutter.png" width="120" alt="EcoBin Logo" />
+</p>
+
+<p align="center">
   <strong>Smart waste collection. Greener rewards. Better communities.</strong>
 </p>
 
-EcoBin is a premium Flutter app experience designed to simplify waste collection, encourage eco-friendly habits, and reward users for sustainable action.
+EcoBin is a premium, sustainability-first Flutter app that helps users and collectors participate in cleaner, smarter waste management through an elegant mobile experience.
 
-## ✨ Why EcoBin?
+## ✨ Product vision
 
-Built for a cleaner future, EcoBin brings together:
+EcoBin turns sustainable habits into a rewarding everyday experience by combining:
 
-- reward-based eco engagement
-- pickup and collection visibility
-- community-driven sustainability actions
-- modern, mobile-first user experience
-- responsive dashboard flows for day-to-day use
+- eco-points and rewards tracking
+- collection and pickup monitoring
+- live status updates and notifications
+- user-friendly onboarding and community engagement
+- a polished, mobile-first design language
 
-## 🌿 Highlights
+## 🌱 What makes it special
 
-| Feature | Description |
-| --- | --- |
-| User onboarding | Smooth login and registration experience |
-| Collector workflows | Pickup and route-oriented dashboard experience |
-| Eco-points | Real-time tracking of eco rewards and impact |
-| Notifications | Updates, alerts, and reminders in one place |
-| Marketplace | Eco-conscious offers and community rewards |
-| Responsive UI | Clean Material Design interface optimized for mobile |
+- Clean and premium user experience
+- Responsive UI optimized for real-world use
+- Reward-driven engagement for eco-friendly behavior
+- Built for both end users and collection teams
+- Ready to evolve into a broader sustainability platform
 
-## 🛠️ Tech Stack
+## 🚀 Core features
+
+- User login and registration flows
+- Collector dashboard with pickup workflows
+- Live tracking and status updates
+- Eco-points rewards overview
+- Notification center for reminders and activity
+- Marketplace offers and green promo experiences
+- Material-based user interface with a polished app feel
+
+## 🧩 Tech stack
 
 - Flutter
 - Dart
 - Material Design
-- `sizer` for responsive layout
-- `shared_preferences` for local persistence
-- `flutter_svg` for vector graphics
-- `google_fonts` for polished typography
+- `sizer` for responsive layouts
+- `shared_preferences` for lightweight local storage
+- `flutter_svg` for scalable visuals
+- `google_fonts` for modern typography
 
-## 📁 Project Structure
+## 📁 Project structure
 
 ```text
 ecobin/
-├── android/                # Android project files
-├── ios/                    # iOS project files
+├── android/                  # Android configuration
+├── ios/                      # iOS configuration
 ├── lib/
-│   ├── core/               # Shared exports and utilities
-│   ├── presentation/       # Screens and UI modules
-│   ├── routes/             # App route definitions
-│   ├── theme/              # App theming and styles
-│   ├── widgets/            # Reusable UI components
-│   ├── main.dart           # App entry point
+│   ├── core/                 # Shared exports and utilities
+│   ├── presentation/         # Screens and UI modules
+│   ├── routes/               # App route configuration
+│   ├── theme/                # Styling and theming
+│   ├── widgets/              # Reusable UI components
+│   ├── main.dart             # App entry point
 │   └── ...
 ├── assets/
-│   └── images/             # App visuals and assets
-├── analysis_options.yaml   # Linting rules
-├── pubspec.yaml            # Flutter dependencies
-├── README.md               # Project documentation
-├── .gitignore              # Git ignore rules
-├── LICENSE                 # License file
-└── .github/                # Optional project automation
+│   └── images/               # App visuals and assets
+├── analysis_options.yaml    # Linting configuration
+├── pubspec.yaml             # App dependencies
+├── README.md                # Project documentation
+├── .gitignore               # Git ignore rules
+├── LICENSE                  # Project license
+└── .github/                 # Optional automation and workflows
 ```
 
-## 🚀 Getting Started
+## 🛠️ Getting started
 
 ### Prerequisites
 
@@ -77,19 +88,24 @@ ecobin/
 - Android Studio or VS Code with Flutter support
 - Android SDK / Xcode for device builds
 
-### Install and run
+### Install
 
 ```bash
 git clone https://github.com/Cyrus-Hackman/ecobin.git
 cd ecobin
 flutter pub get
+```
+
+### Run the app
+
+```bash
 flutter run
 ```
 
-## 🧪 Useful Commands
+## 🧪 Useful commands
 
 ```bash
-# Run app in debug mode
+# Run in debug mode
 flutter run
 
 # Run tests
@@ -104,7 +120,7 @@ flutter build ios --release
 
 ## 📌 Notes
 
-This project currently includes demo-ready flows for login, dashboard exploration, collection tracking, and eco-market interactions, making it a strong foundation for a modern sustainability-focused app.
+This project currently includes demo-ready flows for login, dashboard exploration, collection tracking, and eco-market interactions, making it a strong foundation for a modern sustainability-focused mobile product.
 
 ## 📄 License
 
@@ -113,5 +129,5 @@ This project is provided for development and learning purposes.
 ---
 
 <p align="center">
-  <sub>Crafted for a cleaner, greener digital experience.</sub>
+  <sub>Crafted for a cleaner, greener digital future.</sub>
 </p>
