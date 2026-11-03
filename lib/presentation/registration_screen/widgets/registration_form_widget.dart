@@ -15,8 +15,10 @@ class RegistrationFormWidget extends StatefulWidget {
   final TextEditingController cityCtrl;
   final TextEditingController postalCtrl;
   final bool termsAccepted;
+  final String selectedRole;
   final bool isLoading;
   final ValueChanged<bool?> onTermsChanged;
+  final ValueChanged<String?> onRoleChanged;
   final VoidCallback onSubmit;
   final bool isTablet;
 
@@ -33,8 +35,10 @@ class RegistrationFormWidget extends StatefulWidget {
     required this.cityCtrl,
     required this.postalCtrl,
     required this.termsAccepted,
+    required this.selectedRole,
     required this.isLoading,
     required this.onTermsChanged,
+    required this.onRoleChanged,
     required this.onSubmit,
     required this.isTablet,
   });
@@ -106,6 +110,36 @@ class _RegistrationFormWidgetState extends State<RegistrationFormWidget> {
       key: widget.formKey,
       child: Column(
         children: [
+          _sectionCard(
+            title: 'Account Type',
+            icon: Icons.work_outline_rounded,
+            children: [
+              DropdownButtonFormField<String>(
+                value: widget.selectedRole,
+                decoration: const InputDecoration(
+                  labelText: 'I am registering as a',
+                  prefixIcon: Icon(
+                    Icons.group_outlined,
+                    size: 20,
+                    color: AppTheme.textMuted,
+                  ),
+                ),
+                items: ['User', 'Collector']
+                    .map((role) => DropdownMenuItem(
+                          value: role,
+                          child: Text(
+                            role,
+                            style: GoogleFonts.plusJakartaSans(
+                              fontSize: 15,
+                              color: AppTheme.textPrimary,
+                            ),
+                          ),
+                        ))
+                    .toList(),
+                onChanged: widget.onRoleChanged,
+              ),
+            ],
+          ),
           _sectionCard(
             title: 'Personal Information',
             icon: Icons.person_outline_rounded,
