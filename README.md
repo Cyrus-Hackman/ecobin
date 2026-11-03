@@ -1,85 +1,80 @@
-﻿# EcoBin
+# EcoBin
 
-A modern Flutter application focused on sustainable waste collection, eco-rewards, live tracking, and community engagement.
-
-<div align="center">
-  <img src="https://img.shields.io/badge/Flutter-3.9+-02569B?style=for-the-badge&logo=flutter" alt="Flutter" />
-  <img src="https://img.shields.io/badge/Dart-3.9+-0175C2?style=for-the-badge&logo=dart" alt="Dart" />
-  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20iOS-3DDC84?style=for-the-badge" alt="Platform" />
-</div>
+EcoBin is a Flutter-based mobile app for sustainable waste collection, eco-rewards, and green community engagement.
 
 ## Overview
 
-EcoBin is a cross-platform mobile app designed to make waste collection more transparent and rewarding. It combines pickup workflows, eco-points tracking, notifications, live tracking, and a marketplace experience into one clean user-facing dashboard.
+This project brings together:
 
-## Features
-
-- User login and registration flows
-- Collector dashboard and live pickup tracking
-- Eco-points and rewards overview
-- Notification center for updates and reminders
-- Marketplace with eco-focused offers and promos
-- Responsive UI built with Flutter and Material Design
-- Local persistence for lightweight app state
+- user login and registration flows
+- collector dashboards and live pickup tracking
+- eco-points and rewards tracking
+- notification center and alerts
+- marketplace offers for eco-conscious users
+- responsive, material-based UI design
 
 ## Tech Stack
 
 - Flutter
 - Dart
 - Material Design
-- `sizer` for responsive layout
-- `shared_preferences` for local persistence
-- `flutter_svg` for SVG assets
-- `google_fonts` for typography
+- `sizer`
+- `shared_preferences`
+- `flutter_svg`
+- `google_fonts`
+
+## Features
+
+- Smart, responsive app interface
+- Waste collection workflow support
+- Eco-points tracking and reward visibility
+- Live tracking and collection status display
+- Notifications for user and collector engagement
+- Demo-ready screens for app exploration and UI prototyping
 
 ## Project Structure
 
 ```text
 ecobin/
-├── android/               # Android project files
-├── ios/                  # iOS project files
+├── android/                 # Android configuration
+├── ios/                     # iOS configuration
 ├── lib/
-│   ├── core/             # Shared exports and core app utilities
-│   ├── presentation/     # Screens and UI modules
-│   ├── routes/           # Route definitions
-│   ├── theme/            # Theme config and styling
-│   ├── widgets/          # Reusable UI widgets
-│   ├── main.dart         # App entry point
+│   ├── core/                # Shared exports and utilities
+│   ├── presentation/        # Screens and UI modules
+│   ├── routes/              # App routing
+│   ├── theme/               # Theme configuration
+│   ├── widgets/             # Shared widgets
+│   ├── main.dart            # App entry point
 │   └── ...
 ├── assets/
-│   └── images/           # Application images and assets
-├── analysis_options.yaml # Linting configuration
-├── pubspec.yaml          # Flutter dependencies and config
-├── README.md             # Project documentation
-├── .gitignore            # Git ignore rules
-└── LICENSE               # Project license (if added)
+│   └── images/              # App images
+├── analysis_options.yaml    # Linting rules
+├── pubspec.yaml             # Flutter dependencies
+├── README.md                # Project documentation
+├── .gitignore               # Git ignore entries
+└── LICENSE                  # License file (if present)
 ```
 
 ## Prerequisites
 
-Before running the app, make sure you have:
+Before running the project, install:
 
 - Flutter SDK 3.9.0 or newer
 - Dart SDK
 - Android Studio or VS Code with Flutter support
-- Android SDK / Xcode for device builds
+- Android SDK or Xcode for device builds
 
 ## Getting Started
 
-1. Clone the repository:
+Clone the repo and install dependencies:
 
 ```bash
 git clone https://github.com/Cyrus-Hackman/ecobin.git
 cd ecobin
-```
-
-2. Install dependencies:
-
-```bash
 flutter pub get
 ```
 
-3. Run the app:
+Run the app:
 
 ```bash
 flutter run
@@ -88,13 +83,13 @@ flutter run
 ## Useful Commands
 
 ```bash
-# Run the app in debug mode
+# Run in debug mode
 flutter run
 
 # Run tests
 flutter test
 
-# Build Android release
+# Build Android release APK
 flutter build apk --release
 
 # Build iOS release
@@ -103,10 +98,8 @@ flutter build ios --release
 
 ## Notes
 
-This project currently includes demo-style login and dashboard flows for app exploration and UI prototyping. It is a good starting point for a sustainability-focused waste management application.
+This project currently includes demo-style flows for login, tracking, dashboard, and marketplace interactions, making it a solid starting point for a sustainability-focused app.
 
 ## License
 
-This project is provided as-is for development and learning purposes.
-
-Built with Flutter and a focus on cleaner, greener city experiences.
+This project is provided for development and learning purposes.
