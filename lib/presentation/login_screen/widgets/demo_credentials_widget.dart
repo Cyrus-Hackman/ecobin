@@ -5,7 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../theme/app_theme.dart';
 
 class DemoCredentialsWidget extends StatelessWidget {
-  final VoidCallback onUseDemoCredentials;
+  final void Function(String role) onUseDemoCredentials;
 
   const DemoCredentialsWidget({super.key, required this.onUseDemoCredentials});
 
@@ -33,7 +33,7 @@ class DemoCredentialsWidget extends StatelessWidget {
               ),
               const SizedBox(width: 6),
               Text(
-                'Demo Account',
+                'Demo Accounts',
                 style: GoogleFonts.plusJakartaSans(
                   fontSize: 13,
                   fontWeight: FontWeight.w700,
@@ -43,37 +43,60 @@ class DemoCredentialsWidget extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 10),
-          _CredentialRow(label: 'Email', value: 'maya.chen@ecobin.app'),
+          _CredentialRow(label: 'User', value: 'maya.chen@ecobin.app'),
           const SizedBox(height: 6),
-          _CredentialRow(
-            label: 'Password',
-            value: 'EcoGreen2024!',
-            obscure: true,
-          ),
+          _CredentialRow(label: 'Collector', value: 'driver.john@ecobin.app'),
           const SizedBox(height: 12),
-          SizedBox(
-            width: double.infinity,
-            child: OutlinedButton(
-              onPressed: onUseDemoCredentials,
-              style: OutlinedButton.styleFrom(
-                foregroundColor: AppTheme.primaryGreen,
-                side: const BorderSide(
-                  color: AppTheme.primaryGreen,
-                  width: 1.5,
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () => onUseDemoCredentials('User'),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppTheme.primaryGreen,
+                    side: const BorderSide(
+                      color: AppTheme.primaryGreen,
+                      width: 1.5,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                  ),
+                  child: Text(
+                    'Use User',
+                    style: GoogleFonts.plusJakartaSans(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 10),
               ),
-              child: Text(
-                'Use Demo Credentials',
-                style: GoogleFonts.plusJakartaSans(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w700,
+              const SizedBox(width: 10),
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () => onUseDemoCredentials('Collector'),
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: AppTheme.statusConfirmed,
+                    side: const BorderSide(
+                      color: AppTheme.statusConfirmed,
+                      width: 1.5,
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
+                  ),
+                  child: Text(
+                    'Use Collector',
+                    style: GoogleFonts.plusJakartaSans(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
                 ),
               ),
-            ),
+            ],
           ),
         ],
       ),
