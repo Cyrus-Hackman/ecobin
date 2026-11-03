@@ -17,6 +17,7 @@ class _RegistrationScreenState extends State<RegistrationScreen>
   late Animation<double> _fadeAnimation;
   bool _isLoading = false;
   bool _termsAccepted = false;
+  String _selectedRole = 'User';
 
   final _formKey = GlobalKey<FormState>();
   final _firstNameCtrl = TextEditingController();
@@ -76,9 +77,12 @@ class _RegistrationScreenState extends State<RegistrationScreen>
     await Future.delayed(const Duration(milliseconds: 1600));
     if (mounted) {
       setState(() => _isLoading = false);
+      final route = _selectedRole == 'Collector'
+          ? AppRoutes.collectorDashboardScreen
+          : AppRoutes.dashboardHomeScreen;
       Navigator.pushNamedAndRemoveUntil(
         context,
-        AppRoutes.dashboardHomeScreen,
+        route,
         (r) => false,
       );
     }
@@ -118,9 +122,11 @@ class _RegistrationScreenState extends State<RegistrationScreen>
               cityCtrl: _cityCtrl,
               postalCtrl: _postalCtrl,
               termsAccepted: _termsAccepted,
+              selectedRole: _selectedRole,
               isLoading: _isLoading,
               onTermsChanged: (v) =>
                   setState(() => _termsAccepted = v ?? false),
+              onRoleChanged: (r) => setState(() => _selectedRole = r ?? 'User'),
               onSubmit: _handleRegister,
               isTablet: false,
             ),
@@ -152,9 +158,12 @@ class _RegistrationScreenState extends State<RegistrationScreen>
                   cityCtrl: _cityCtrl,
                   postalCtrl: _postalCtrl,
                   termsAccepted: _termsAccepted,
+                  selectedRole: _selectedRole,
                   isLoading: _isLoading,
                   onTermsChanged: (v) =>
                       setState(() => _termsAccepted = v ?? false),
+                  onRoleChanged: (r) =>
+                      setState(() => _selectedRole = r ?? 'User'),
                   onSubmit: _handleRegister,
                   isTablet: true,
                 ),
